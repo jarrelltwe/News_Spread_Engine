@@ -1,2 +1,4 @@
-# Generated 2025-11-13 17:25:03.069321
-STOCKS = ['AMD', 'NVDA', 'ALB', 'ALGN', 'ADI', 'AMAT', 'ANET', 'XYZ', 'AVGO', 'CNC', 'CHTR', 'COIN', 'CEG', 'DDOG', 'DECK', 'DELL', 'DXCM', 'DLTR', 'DASH', 'EL', 'FSLR', 'FCX']
+# Filtered by sentiment analysis: 2025-11-13 23:25:04.372824
+STOCKS = ['ALB', 'ALGN', 'DASH']
+
+REMOVED_STOCKS = {'AMD': 'earnings in 12 days', 'NVDA': 'earnings in 14 days', 'PLTR': 'earnings in 30 days', 'COIN': 'major lawsuits or regulatory action', 'ORCL': 'earnings in 10 days', 'TSLA': 'major lawsuits or regulatory action', 'AMAT': 'earnings in 15 days', 'ANET': 'earnings in 20 days', 'ADSK': 'major lawsuits or regulatory action', 'BIIB': 'major lawsuits or regulatory action', 'XYZ': 'earnings in 25 days', 'AVGO': 'major lawsuits or regulatory action', 'CNC': 'major lawsuits or regulatory action', 'CHTR': 'major lawsuits or regulatory action', 'CEG': 'major lawsuits or regulatory action', 'DDOG': 'major lawsuits or regulatory action', 'DECK': 'major lawsuits or regulatory action', 'DELL': 'major lawsuits or regulatory action', 'DXCM': 'FDA decisions pending'}

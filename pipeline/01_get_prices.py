@@ -7,6 +7,7 @@ import json
 import sys
 import os
 from datetime import datetime
+from config import USERNAME, PASSWORD
 
 def check_prerequisites():
     """Check if everything is set up correctly"""
@@ -56,7 +57,7 @@ async def get_real_prices():
     try:
         # Create session
         print("📡 Connecting to TastyTrade...")
-        sess = Session(username, password)
+        sess = Session(USERNAME, PASSWORD)
         print("✅ Connected successfully")
         
         async with DXLinkStreamer(sess) as streamer:

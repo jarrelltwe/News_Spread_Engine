@@ -90,6 +90,7 @@ def main():
         ("00D", "pipeline/00d_filter_iv.py", "Filter by IV range"),
         ("00E", "pipeline/00e_select_22.py", "Score & select top 22"),
         ("00F", "pipeline/00f_get_news.py", "Fetch news headlines"),
+        ("00G", "pipeline/00g_gpt_sentiment_filter.py", "GPT sentiment filter"),
         ("01", "pipeline/01_get_prices.py", "Get real-time prices"),
         ("02", "pipeline/02_get_chains.py", "Get options chains"),
         ("03", "pipeline/03_check_liquidity.py", "Check liquidity"),
