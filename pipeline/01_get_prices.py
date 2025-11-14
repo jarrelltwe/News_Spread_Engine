@@ -12,8 +12,8 @@ from config import USERNAME, PASSWORD
 def check_prerequisites():
     """Check if everything is set up correctly"""
     # Check credentials
-    username = os.getenv("TASTY_USERNAME")
-    password = os.getenv("TASTY_PASSWORD")
+    username = USERNAME
+    password = PASSWORD
     
     if not username or not password:
         print("❌ Missing TastyTrade credentials")

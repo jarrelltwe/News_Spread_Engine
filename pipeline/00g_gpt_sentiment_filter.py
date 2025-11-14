@@ -66,13 +66,11 @@ OUTPUT JSON:
     client = OpenAI(api_key=OPENAI_API_KEY)
     
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-5",
         messages=[
             {"role": "system", "content": "You filter stocks for credit spread safety. Output JSON only."},
             {"role": "user", "content": prompt}
-        ],
-        temperature=0.3,
-        max_tokens=500
+        ]
     )
     
     content = response.choices[0].message.content

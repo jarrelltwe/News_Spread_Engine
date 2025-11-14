@@ -147,9 +147,7 @@ def main():
                     "content": "You analyze credit spreads with structured 5W1H news analysis. Extract specific dates, events, entities from headlines and summaries. Assign risk heat scores 1-10."
                 },
                 {"role": "user", "content": prompt}
-            ],
-            temperature=0.3,
-            max_tokens=3000
+            ]
         )
         
         analysis = response.choices[0].message.content
