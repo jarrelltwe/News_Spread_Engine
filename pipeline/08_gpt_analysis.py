@@ -139,18 +139,32 @@ def main():
     client = OpenAI(api_key=OPENAI_API_KEY)
     
     try:
-        response = client.chat.completions.create(
-            model="gpt-5",
-            messages=[
+        response = client.responses.create(
+            model="gpt-5.1",
+            input=[
                 {
                     "role": "system",
                     "content": "You analyze credit spreads with structured 5W1H news analysis. Extract specific dates, events, entities from headlines and summaries. Assign risk heat scores 1-10."
                 },
-                {"role": "user", "content": prompt}
-            ]
+                {
+                    "role": "user",
+                    "content": prompt
+                },
+            ],
+            reasoning={
+                "effort": "medium"
+            },
+            text={
+                "verbosity": "low"
+            }
         )
+
+        analysis = getattr(response, "output_text", None)
+        if not analysis or not analysis.strip():
+            raise RuntimeError(
+                f"Model returned empty content. Raw response object: {response}"
+            )
         
-        analysis = response.choices[0].message.content
         print("✅ Analysis complete\n")
         
         print("="*60)
